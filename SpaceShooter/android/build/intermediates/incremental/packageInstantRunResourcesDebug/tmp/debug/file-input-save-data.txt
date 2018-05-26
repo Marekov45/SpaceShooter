@@ -1,7 +1,0 @@
-#Internal package file, do not edit.
-#Sat May 26 21:36:07 CEST 2018
-0.baseType=DIRECTORY
-0.base=C\:\\Users\\Marvin\\IdeaProjects\\SpaceShooter\\android\\build\\intermediates\\assets\\debug
-0.path=badlogic.jpg
-0.set=ASSET
-count=1

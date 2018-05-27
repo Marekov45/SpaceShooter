@@ -1,4 +1,4 @@
-package com.rekovsky.marvin.game.Tools; 
+package com.rekovsky.marvin.game.Tools;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;

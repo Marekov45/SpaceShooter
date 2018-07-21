@@ -2,7 +2,7 @@ package com.rekovsky.marvin.game;
 
 
 import com.badlogic.gdx.Game;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch; 
 import com.rekovsky.marvin.game.States.MenuScreen;
 import com.rekovsky.marvin.game.Tools.ScrollingBackground;
 

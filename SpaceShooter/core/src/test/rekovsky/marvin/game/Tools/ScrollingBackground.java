@@ -4,7 +4,9 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import test.rekovsky.marvin.game.SpaceShooter;
 
-
+/**
+ * {@link ScrollingBackground} implements the screen background that scrolls down the whole time.
+ */
 public class ScrollingBackground {
 
     public static final int DEFAULT_SPEED = 80;
@@ -13,12 +15,15 @@ public class ScrollingBackground {
 
     Texture image;
     float y1, y2;
-    int speed;//In pixels / second
+    int speed; //In pixels / second
     int goalSpeed;
     float imageScale;
     boolean speedFixed;
 
-    public ScrollingBackground () {
+    /**
+     * Initializes the activity.
+     */
+    public ScrollingBackground() {
         image = new Texture("stars_background.png");
 
         y1 = 0;
@@ -29,7 +34,13 @@ public class ScrollingBackground {
         speedFixed = true;
     }
 
-    public void updateAndRender (float deltaTime, SpriteBatch batch) {
+    /**
+     * Called when the screen should render itself.
+     *
+     * @param deltaTime time in seconds since the last render.
+     * @param batch     draws the sprites. It must not be {@code null}.
+     */
+    public void updateAndRender(float deltaTime, SpriteBatch batch) {
         //Speed adjustment to reach goal
         if (speed < goalSpeed) {
             speed += GOAL_REACH_ACCELERATION * deltaTime;
@@ -59,11 +70,17 @@ public class ScrollingBackground {
         batch.draw(image, 0, y2, SpaceShooter.WIDTH, image.getHeight() * imageScale);
     }
 
-    public void setSpeed (int goalSpeed) {
+    /**
+     * @param goalSpeed the goal speed the stars in the background should be scrolling at.
+     */
+    public void setSpeed(int goalSpeed) {
         this.goalSpeed = goalSpeed;
     }
 
-    public void setSpeedFixed (boolean speedFixed) {
+    /**
+     * @param speedFixed the speed is either a fixed number (and doesn't accelerate) or not.
+     */
+    public void setSpeedFixed(boolean speedFixed) {
         this.speedFixed = speedFixed;
     }
 
